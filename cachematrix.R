@@ -1,11 +1,9 @@
-setwd("~/RStudio samples/coursera course 2")
-## I simply set the input x as a matrix
+## setwd("~/RStudio samples/coursera course 2")
 
-## and then set the solved value "s" as a null
-
-## then I changed every reference to "mean" to "solve"
-
-makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
+Firstly I input x as a matrix
+My solved value "s" as a null
+Every reference was set to "mean" to "solve"
+makeCacheMatrix <- function(x = matrix()) {
 
   s <- NULL
 
@@ -31,13 +29,13 @@ makeCacheMatrix <- function(x = matrix(sample(1:100,9),3,3)) {
 
 }
 
-##
 
-## Same here, changed "mean" to "solve" and "m" to "s"
+Likewise I set every reference "mean" to "solve" and "m" to "s"
+## This was done to return a matrix that is the inverse of 'x'
 
 cacheSolve <- function(x, ...) {
-
-  s <- x$getsolve()
+        
+        s <- x$getsolve()
 
   if(!is.null(s)) {
 
@@ -54,5 +52,4 @@ cacheSolve <- function(x, ...) {
   x$setsolve(s)
 
   s
-
 }
